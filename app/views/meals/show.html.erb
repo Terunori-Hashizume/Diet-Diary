@@ -1,0 +1,10 @@
+<p id="notice" class="alert alert-success">
+  <%= notice %>
+</p>
+
+<h2>タイトル</h2>
+<p><%= @meal.title %></p>
+<h2>内容</h2>
+<p><%= @meal.content %></p>
+<%= link_to '編集する', edit_meal_path(@meal.id), class: 'btn edit-btn' %>
+<%= link_to '削除する', meal_path(@meal.id), method: 'delete', class: 'btn destroy-btn', 'data-confirm' => '本当に削除しますか？' %>

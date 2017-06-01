@@ -1,0 +1,11 @@
+<h1>投稿の一覧</h1>
+<ul class="notes">
+  <% @meals.each do |meal| %>
+    <li>
+      <p>タイトル</p>
+      <span class="content">
+        <%= link_to meal.title, meal_path(meal.id) %>
+      </span>
+    </li>
+  <% end %>
+</ul>
